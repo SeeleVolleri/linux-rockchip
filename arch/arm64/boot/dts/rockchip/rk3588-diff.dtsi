@@ -254,7 +254,7 @@
 };
 
 &i2c6 {
-	status = "disabled";
+	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&i2c6m0_xfer>;
 	
