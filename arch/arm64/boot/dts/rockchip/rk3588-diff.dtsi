@@ -264,7 +264,7 @@
 		gpio-controller; 
 		#gpio-cells = <2>; 
 		gpio-group-num = <200>; 
-		status = "disabled";
+		status = "okay";
 	};
 
 	hym8563: hym8563@51 {
