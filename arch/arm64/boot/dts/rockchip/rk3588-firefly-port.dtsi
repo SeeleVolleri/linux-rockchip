@@ -22,7 +22,7 @@
 			label = ":user"; //yellow led
 			linux,default-trigger = "ir-user-click";
 			default-state = "off";
-			gpios = <&pca9555 PCA_IO0_3 GPIO_ACTIVE_HIGH>;
+			gpios = <&{/i2c6/pca9555} PCA_IO0_3 GPIO_ACTIVE_HIGH>;
 		};
 	};
 
@@ -140,7 +140,7 @@
 		regulator-min-microvolt = <5000000>;
 		regulator-max-microvolt = <5000000>;
 		enable-active-high;
-		gpio = <&pca9555 PCA_IO0_5 GPIO_ACTIVE_HIGH>;
+		gpio = <&{/i2c6/pca9555} PCA_IO0_5 GPIO_ACTIVE_HIGH>;
 		vin-supply = <&vcc5v0_usb>;
 		status = "disabled";
 	};
@@ -152,7 +152,7 @@
 		regulator-always-on; 
 		enable-active-high;
 		status = "disabled"; 
-		gpio = <&pca9555 PCA_IO0_4 GPIO_ACTIVE_HIGH>;  //PCA_IO 04
+		gpio = <&{/i2c6/pca9555} PCA_IO0_4 GPIO_ACTIVE_HIGH>;  //PCA_IO 04
 	};
 
 	vbus5v0_typec_pwr_en: vbus5v0-typec-pwr-en-regulator {
@@ -160,7 +160,7 @@
 		regulator-name = "vbus5v0_typec_pwr_en";
 		enable-active-high;
 		status = "disabled";
-		gpio = <&pca9555 PCA_IO1_4 GPIO_ACTIVE_HIGH>;  //PCA_IO 14
+		gpio = <&{/i2c6/pca9555} PCA_IO1_4 GPIO_ACTIVE_HIGH>;  //PCA_IO 14
 	};
 };
 
